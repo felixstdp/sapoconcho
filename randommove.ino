@@ -14,10 +14,10 @@ void setup() {
 
 void loop() {
 
-  analogWrite(AIA,random(255));
-  analogWrite(AIB,random(255));
-  analogWrite(BIA,random(255));
-  analogWrite(BIB,random(255));
+  analogWrite(AIA,random(256));
+  analogWrite(AIB,random(256));
+  analogWrite(BIA,random(256));
+  analogWrite(BIB,random(256));
   delay(1000);
 
 }
