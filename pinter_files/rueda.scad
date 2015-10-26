@@ -16,8 +16,9 @@ union()
             cylinder(h=1,r1=15,r2=15,$fn=40);
         }
         
+        r_eje=1.5;
         translate([0,0,-1])
-        cylinder(h=6,r1=1.5,r2=1.5,$fn=20);
+        cylinder(h=6,r1=r_eje,r2=r_eje,$fn=20);
     
         r=8;    
         translate([0,r,-1])
