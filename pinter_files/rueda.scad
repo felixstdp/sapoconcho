@@ -12,8 +12,6 @@ translate([0,0,2])
 cylinder(h=1,r1=14,r2=15,$fn=40);
 translate([0,0,3])
 cylinder(h=1,r1=15,r2=15,$fn=40);
-
-    
 }
 
 r=8;
