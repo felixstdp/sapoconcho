@@ -5,9 +5,10 @@ union()
 {
     difference()
     {
+
+        // base de la rueda con cuatro capas
         union()
         {
-        // base de la rueda con cuatro capas
             cylinder(h=1,r1=15,r2=15,$fn=40);
             translate([0,0,1])
             cylinder(h=1,r1=15,r2=14,$fn=40);
@@ -23,14 +24,14 @@ union()
         cylinder(h=6,r1=r_eje,r2=r_eje,$fn=20);
         
         // agujeros para aligerar el diseño
-        r=8;    
-        translate([0,r,-1])
+        r=8.2;    
+        translate([0,r,-1]) scale([1.2,0.9,1])
         cylinder(h=6,r1=5,r2=5,$fn=20);
-        translate([0,-r,-1])
+        translate([0,-r,-1]) scale([1.2,0.9,1])
         cylinder(h=6,r1=5,r2=5,$fn=20);
-        translate([-r,0,-1])
+        translate([-r,0,-1]) scale([0.9,1.2,1])
         cylinder(h=6,r1=5,r2=5,$fn=20);
-        translate([r,0,-1])
+        translate([r,0,-1]) scale([0.9,1.2,1])
         cylinder(h=6,r1=5,r2=5,$fn=20);
     
         // hendidura lateral del eje
