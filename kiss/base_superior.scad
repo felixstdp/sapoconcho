@@ -1,3 +1,6 @@
+// Proyecto Sapoconcho KIS (Keep It Simple)
+// chasis superior para Arduino y sensores 
+
 $fn=120;
 gap=0.2;
 difference(){
