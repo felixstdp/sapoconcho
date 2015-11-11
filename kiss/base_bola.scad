@@ -1,3 +1,6 @@
+// Proyecto Sapoconcho KIS (Keep It Simple)
+// subchasis con soporte para bola 
+
 $fn=120;
 gap=0.2;
 difference(){
@@ -36,6 +39,8 @@ translate([0,0,9.5])cylinder(r1=7, r2=6, h=1);
 
 }
 translate([0,0,8])cylinder(d=9,h=25);
+// ajustar la z del traslate para nivelar
+// ajustar la d del sphere para que ruede
 translate([0,0,7.5])sphere(d=10.8);
 translate([0,0,10])cube(size=[3,15,16],center=true);
 }
