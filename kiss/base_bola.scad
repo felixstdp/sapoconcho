@@ -22,13 +22,28 @@ translate([-8.5,25,-1])cylinder(d=2.8,h=15);
 translate([-8.5,-25,-1])cylinder(d=2.8,h=15);
 
 // taladros para la base superior
-translate([32,22,-1])cylinder(d=3.2,h=15);
-translate([32,-22,-1])cylinder(d=3.2,h=15);
-translate([-32,22,-1])cylinder(d=3.2,h=15);
-translate([-32,-22,-1])cylinder(d=3.2,h=15);
+translate([22,32,-1])cylinder(d=3.2,h=15);
+translate([22,-32,-1])cylinder(d=3.2,h=15);
+translate([-22,32,-1])cylinder(d=3.2,h=15);
+translate([-22,-32,-1])cylinder(d=3.2,h=15);
     
 }
 
+
+// soporte para la bola
+translate([38,0,0])
+difference(){
+    union(){
+cylinder(d=14,h=9.5);
+translate([0,0,9.5])cylinder(r1=7, r2=6, h=1);
+
+}
+translate([0,0,8])cylinder(d=9,h=25);
+// ajustar la z del traslate para nivelar
+// ajustar la d del sphere para que ruede
+translate([0,0,7])sphere(d=10.5);
+translate([0,0,9.5])cube(size=[3,15,16],center=true);
+}
 
 // soporte para la bola
 translate([38,0,0])
