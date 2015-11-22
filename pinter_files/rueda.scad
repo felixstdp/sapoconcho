@@ -22,7 +22,7 @@ union()
         }
         
         // eje para el motor (3mm)
-        r_eje=1.5;
+        r_eje=1.5; //aumentar segun impresora
         translate([0,0,-1])
         cylinder(h=9,r1=r_eje,r2=r_eje,$fn=20);
         
@@ -43,6 +43,6 @@ union()
     }
 
     // muesca del eje (0.5mm)
-    translate([0,1.4375,3.5]) scale ([1,.125,1.75])
+    translate([0,1.4375,3.5]) scale ([1,.125,1.75]) //modificar el y del translate segun impresora
     cube(4,center=true);
 }
