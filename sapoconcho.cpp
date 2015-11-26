@@ -1,10 +1,10 @@
 #include <Arduino.h>
 #include "sapoconcho.h"
 
-#define AIA 9 // HIGH or 255 >> left backward
-#define AIB 10 // HIGH or 255 >> left forward
-#define BIA 12 // HIGH or 255 >> right forward
-#define BIB 11 // HIGH or 255 >> right backwards
+#define AIA 11 // HIGH >> left backward
+#define AIB 6 // HIGH >> left forward
+#define BIA 9 // HIGH >> right forward
+#define BIB 10 // HIGH >> right backwards
 
 sapoconcho::sapoconcho(){
   pinMode(AIA,OUTPUT);
