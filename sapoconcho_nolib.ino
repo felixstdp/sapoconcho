@@ -1,9 +1,9 @@
 // programa básico para Sapoconcho con los movimientos como subrutinas y no como librerías
 
-#define AIA 9 // HIGH >> left backward
-#define AIB 10 // HIGH >> left forward
-#define BIA 12 // HIGH >> right forward
-#define BIB 11 // HIGH >> right backwards
+#define AIA 11 // HIGH >> left backward
+#define AIB 6 // HIGH >> left forward
+#define BIA 9 // HIGH >> right forward
+#define BIB 10 // HIGH >> right backwards
 
 void setup() {
 
@@ -17,27 +17,13 @@ void setup() {
 
 void loop() {
 
-  switch(random(4)) {
-
-    case 0:
-      forward(128,128,1000);
-      break;
-
-    case 1:
-      reverse(128,128,1000);
-      break;
-
-    case 2:
-      rotate(128,128,1000);
-      break;
-
-    case 3:
-      rotate(128,128,-1000);
-      break;
-
-    default:
-      brake(1000);
-      break;
+      forward(128,128,1000); // adelante (velocidad rueda izquierda, vel rueda derecha, tiempo)
+      reverse(128,128,1000); // adelante (velocidad rueda izquierda, vel rueda derecha, tiempo)
+      rotate(128,128,1000); // gira a la derecha (vel rueda izq, del rueda der, tiempo)
+      rotate(128,128,-1000); // gira a la izquierda (vel rueda izq, del rueda der, tiempo)
+      brake(1000); // frena (tiempo)
+      drive(128,-128,1000); // desplazamiento general (vel rueda izq, del rueda der, tiempo) vel pos o neg
+      
   }
   
   tone(13,1500,50);
@@ -48,8 +34,8 @@ void forward(int l, int r, int t)
 {
   analogWrite(AIA,0);
   analogWrite(AIB,l);
-  analogWrite(BIA,r);
-  analogWrite(BIB,0);
+  analogWrite(BIA,0);
+  analogWrite(BIB,r);
   delay(t);
 }
 
@@ -57,8 +43,8 @@ void reverse(int l, int r, int t)
 {
   analogWrite(AIA,l);
   analogWrite(AIB,0);
-  analogWrite(BIA,0);
-  analogWrite(BIB,r);
+  analogWrite(BIA,r);
+  analogWrite(BIB,0);
   delay(t);
 }
 
