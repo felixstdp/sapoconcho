@@ -1,10 +1,10 @@
 #include <Arduino.h>
 #include "sapoconcho.h"
 
-#define AIA 11 // HIGH >> left backward
-#define AIB 6 // HIGH >> left forward
-#define BIA 9 // HIGH >> right forward
-#define BIB 10 // HIGH >> right backwards
+#define AIA 10 // HIGH >> left backward
+#define AIB 11 // HIGH >> left forward
+#define BIA 6 // HIGH >> right forward
+#define BIB 9 // HIGH >> right backwards
 
 sapoconcho::sapoconcho(){
   pinMode(AIA,OUTPUT);
@@ -17,8 +17,8 @@ void sapoconcho::forward(int l, int r, int t)
 {
   analogWrite(AIA,0);
   analogWrite(AIB,l);
-  analogWrite(BIA,r);
-  analogWrite(BIB,0);
+  analogWrite(BIA,0);
+  analogWrite(BIB,r);
   delay(t);
 }
 
@@ -26,8 +26,8 @@ void sapoconcho::reverse(int l, int r, int t)
 {
   analogWrite(AIA,l);
   analogWrite(AIB,0);
-  analogWrite(BIA,0);
-  analogWrite(BIB,r);
+  analogWrite(BIA,r);
+  analogWrite(BIB,0);
   delay(t);
 }
 
@@ -35,15 +35,15 @@ void sapoconcho::rotate(int l, int r, int t)
 {
   if (t>0)
   {
-    analogWrite(AIA,l);
-    analogWrite(AIB,0);
+    analogWrite(AIA,0);
+    analogWrite(AIB,l);
     analogWrite(BIA,r);
     analogWrite(BIB,0);
   }
   else
   {
-    analogWrite(AIA,0);
-    analogWrite(AIB,l);
+    analogWrite(AIA,l);
+    analogWrite(AIB,0);
     analogWrite(BIA,0);
     analogWrite(BIB,r);
   }
@@ -72,12 +72,13 @@ void sapoconcho::drive(int l, int r, int t)
   
   if (r>0)
   {
-    analogWrite(BIA,r);
-    analogWrite(BIB,0);    
-  } else {
     analogWrite(BIA,0);
-    analogWrite(BIB,-r);
+    analogWrite(BIB,r);    
+  } else {
+    analogWrite(BIA,-r);
+    analogWrite(BIB,0);
   }
   
   delay(t);
 }
+
