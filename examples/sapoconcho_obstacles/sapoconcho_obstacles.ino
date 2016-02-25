@@ -1,22 +1,13 @@
 // programa básico para Sapoconcho para evitar obstáculos usando los sensores US
 
-#define AIA 11 // HIGH >> left backward
-#define AIB 6 // HIGH >> left forward
-#define BIA 9 // HIGH >> right forward
-#define BIB 10 // HIGH >> right backwards
+#include <L9110.h>
+L9110 sapoconcho;
 
 #include <NewPing.h>
 NewPing sonar_L(8,8,50);  // trigger y echo al pin 8, distancia máxima limitada a 50cm
 NewPing sonar_R(7,7,50);
 
-void setup() {
-
-  pinMode(AIA,OUTPUT);
-  pinMode(AIB,OUTPUT);
-  pinMode(BIA,OUTPUT);
-  pinMode(BIB,OUTPUT);
-  
-}
+void setup() {}
 
 void loop()
 {
@@ -37,37 +28,9 @@ void loop()
  
   if (dist<20)
   {
-    if (dist_L>dist_R) rotate(250);
-    else rotate(-250);
+    if (dist_L>dist_R) sapoconcho.rotate(250);
+    else sapoconcho.rotate(-250);
   }
-  else forward(240,240,0);
+  else sapoconcho.forward(240,240,0);
   
-}
-
-void forward(int l, int r, int t)
-{
-  analogWrite(AIA,0);
-  analogWrite(AIB,l);
-  analogWrite(BIA,0);
-  analogWrite(BIB,r);
-  delay(t);
-}
-
-void rotate(int t)
-{
-  if (t>0)
-  {
-    analogWrite(AIA,200);
-    analogWrite(AIB,0);
-    analogWrite(BIA,0);
-    analogWrite(BIB,200);
-  }
-  else
-  {
-    analogWrite(AIA,0);
-    analogWrite(AIB,200);
-    analogWrite(BIA,200);
-    analogWrite(BIB,0);
-  }
-  delay(abs(t));
 }
