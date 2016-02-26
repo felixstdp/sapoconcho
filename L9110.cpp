@@ -7,7 +7,7 @@
                 |TX0   RAW| Batteries +
                 |RX1   GND| Batteries -
                 |GND   RST|
-                |GND   VCC| Breadboard 5V
+                |GND   VCC| 5V
                 |2     #A3| 
       L9110 BIA |3~    #A2| 
                 |4#    #A1| 
@@ -27,8 +27,8 @@
                 |SS   MISO|
                 |TX0   VIN| Batteries +
                 |TX1   GND| Batteries -
-                |RST   RST| Reset
-                |GND    5V| Breadboard 5V
+                |RST   RST| 
+                |GND    5V| 5V
                 |2        | 
                 |3~       | 
                 |4     #A5| 
