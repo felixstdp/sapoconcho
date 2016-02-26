@@ -4,8 +4,8 @@
 /*
             < ARDUINO PRO MICRO >
              
-                |TX0   RAW| Batteries V+
-                |RX1   GND| Batteries GND
+                |TX0   RAW| Batteries +
+                |RX1   GND| Batteries -
                 |GND   RST|
                 |GND   VCC| Breadboard 5V
                 |2     #A3| 
@@ -25,8 +25,8 @@
                
                 |MOSI  SCK|
                 |SS   MISO|
-                |TX0   VIN| Batteries V+
-                |TX1   GND| Batteries GND
+                |TX0   VIN| Batteries +
+                |TX1   GND| Batteries -
                 |RST   RST| Reset
                 |GND    5V| Breadboard 5V
                 |2        | 
