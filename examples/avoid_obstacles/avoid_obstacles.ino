@@ -28,8 +28,8 @@ void loop()
  
   if (dist<20)
   {
-    if (dist_L>dist_R) sapoconcho.rotate(250);
-    else sapoconcho.rotate(-250);
+    if (dist_L>dist_R) sapoconcho.rotate(128,128,250);
+    else sapoconcho.rotate(128,128,-250);
   }
   else sapoconcho.forward(240,240,0);
   
