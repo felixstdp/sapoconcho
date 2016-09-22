@@ -1,4 +1,4 @@
-color("red")
+//color("red")
 {
 rotate([180,0,90])base_inf();
 translate([0,0,55])rotate([0,180,90])
@@ -105,50 +105,31 @@ difference(){
 }
 
 module rueda(){
-union()
-{
-    difference()
-    {
+$fn=60;
+d_eje=3.7;
+r_ext=15.5;
 
-        // base de la rueda con cuatro capas
-        union()
-        {
-            r_ext=15;
-            cylinder(h=1,r1=r_ext,r2=r_ext,$fn=40);
-            translate([0,0,1])
-            cylinder(h=1,r1=r_ext,r2=r_ext-1,$fn=40);
-            translate([0,0,2])
-            cylinder(h=1,r1=r_ext-1,r2=r_ext,$fn=40);
-            translate([0,0,3])
-            cylinder(h=1,r1=r_ext,r2=r_ext,$fn=40);
-            translate([0,0,4])
-            cylinder(h=3,r1=3.6,r2=3.6,$fn=16);
-        }
-        
-        // eje para el motor (3mm)
-        r_eje=1.5; //aumentar segun impresora
-        translate([0,0,-1])
-        cylinder(h=9,r1=r_eje,r2=r_eje,$fn=20);
-        
-        // agujeros para aligerar el diseño
-        r=8.2;    
-        translate([0,r,-1]) scale([1.2,0.9,1])
-        cylinder(h=6,r1=5,r2=5,$fn=20);
-        translate([0,-r,-1]) scale([1.2,0.9,1])
-        cylinder(h=6,r1=5,r2=5,$fn=20);
-        translate([-r,0,-1]) scale([0.9,1.2,1])
-        cylinder(h=6,r1=5,r2=5,$fn=20);
-        translate([r,0,-1]) scale([0.9,1.2,1])
-        cylinder(h=6,r1=5,r2=5,$fn=20);
-    
-        // hendidura lateral del eje
-        translate([-.4,-4,-1]) scale ([.2,1,3])
-        cube(4);
-    }
-
-    // muesca del eje (0.5mm)
-    translate([0,1.4375,3.5]) scale ([1,.125,1.75]) //modificar el y del translate segun impresora
-    cube(4,center=true);
+union(){
+difference() {
+union(){
+cylinder(h=.8,r1=r_ext,r2=r_ext);
+translate([0,0,.8])
+cylinder(h=1.2,r1=r_ext,r2=r_ext-1);
+translate([0,0,2])
+cylinder(h=1.2,r1=r_ext-1,r2=r_ext);
+translate([0,0,3.2])
+cylinder(h=.8,r1=r_ext,r2=r_ext);
+}
+translate([0,0,-1])cylinder(h=6,r=r_ext-2);
+}        
+difference(){
+cylinder(h=7,d=10);
+translate([0,0,-1])cylinder(h=9,d=d_eje);
+}
+translate([1.20,-2,0])cube(size=[2,4,7]);
+for(i=[0:60:300]){
+rotate([0,0,i])translate([2,-0.5,0])cube([12,1,4]);
+}
 }
 }
 
@@ -158,9 +139,9 @@ intersection(){
 cylinder(d=12,h=12,$fn=60);
 cube([12,10,24],center=true);
 }
-translate([0,0,18])cube([12,10,12],center=true);
+translate([0,0,16])cube([12,10,8],center=true);
 
-translate([0,0,24])rotate([0,0,-15])
+translate([0,0,20])rotate([0,0,-15])
 difference(){
     cylinder(d=3,h=10,$fn=30);
     translate([6,0,7])
