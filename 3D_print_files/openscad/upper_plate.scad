@@ -1,36 +1,29 @@
-$fn=72;
+$fn=120;
 gap=0.2;
-    
 difference(){
+
 union(){
-cylinder(d=90,h=1.5);
-translate([0,38,0])cylinder(d=14,h=8.5);
-translate([0,38,8.5])cylinder(r1=7, r2=6, h=1);
-translate([-31,-12,0])cube(size=[12,24,4]);
-translate([19,-12,0])cube(size=[12,24,4]);
+cylinder(d=90,h=2);
+translate([-34,-11,2])
+cube(size=[10,22,6]);   
 }
 
-translate([35,-18,-1])cube(size=[36,36,14]);
-translate([-71,-18,-1])cube(size=[36,36,14]);
-
-translate([0,0,-1])cylinder(d=20,h=4);
-
-translate([25,8+gap,-1])cylinder(d=2.8,h=15);
-translate([25,-8-gap,-1])cylinder(d=2.8,h=15);
-translate([-25,8+gap,-1])cylinder(d=2.8,h=15);
-translate([-25,-8-gap,-1])cylinder(d=2.8,h=15);
+translate([0,8,-1])cylinder(d=20,h=4);
 
 translate([32,22,-1])cylinder(d=3.2,h=15);
 translate([32,-22,-1])cylinder(d=3.2,h=15);
 translate([-32,22,-1])cylinder(d=3.2,h=15);
 translate([-32,-22,-1])cylinder(d=3.2,h=15);
 
-translate([-22,-37,-1])cube(size=[7.5,7.5,4]);
-translate([14.5,-37,-1])cube(size=[7.5,7.5,4]);
+//translate([0,-10,0])
 
-translate([0,38,5.5])cylinder(d=9.5,h=25);
-translate([0,38,6.4])sphere(d=10.5);
-translate([0,38,10])cube(size=[3,15,16],center=true);
+translate([-32,-6.9,2])
+cube(size=[6.8,13.8,6]); 
 
+translate([-26,-4.25,2])
+cube(size=[7,8.5,6]); 
+
+translate([-29.95,-4,-1])
+cube(size=[3.2,8,3]);
 
 }
