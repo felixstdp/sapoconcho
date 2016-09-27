@@ -1,4 +1,6 @@
-color("red")
+
+
+//color("green")
 {
 rotate([180,0,90])base_inf();
 translate([0,0,55])rotate([0,180,90])
@@ -7,9 +9,9 @@ translate([0,85,10])rotate([90,0,0])
 rueda();
 translate([0,-85,10])rotate([-90,0,0])
 rueda();
-translate([0,25,25])rotate([0,180,0])
+translate([0,25,28])rotate([0,180,0])
 soporte();
-translate([0,-25,25])rotate([0,180,0])
+translate([0,-25,28])rotate([0,180,0])
 soporte();
 }
 
@@ -19,10 +21,19 @@ translate([-22,32,15])pilar();
 translate([-22,-32,15])pilar();
 translate([22,-32,15])pilar();
 translate([38,0,-17])sphere(d=10.5,$fn=60);
-translate([0,-40,10])rotate([90,0,0])motor();
-translate([0,40,10])rotate([-90,0,0])motor();
+translate([0,-43,10])rotate([90,0,0])motor();
+translate([0,43,10])rotate([-90,0,0])motor();
 }
 
+%translate([-22,32,-1])dotted_line(55);
+%translate([-22,-32,-1])dotted_line(55);
+%translate([22,-32,-1])dotted_line(55);
+%translate([22,32,-1])dotted_line(55);
+
+%translate([8.2,-25,-1])dotted_line(25);
+%translate([-8.2,-25,-1])dotted_line(25);
+%translate([-8.2,25,-1])dotted_line(25);
+%translate([8.2,25,-1])dotted_line(25);
 
 module base_inf(){
     
@@ -31,7 +42,7 @@ gap=0.2;
     
 difference(){
 union(){
-cylinder(d=90,h=1.5);
+cylinder(d=90,h=2);
 translate([0,38,0])cylinder(d=14,h=8.5);
 translate([0,38,8.5])cylinder(r1=7, r2=6, h=1);
 translate([-31,-12,0])cube(size=[12,24,4]);
@@ -163,4 +174,10 @@ translate([-6-gap/2,-7,2])
 translate([8+gap,0,-1])cylinder(d=2.8,h=15);
 translate([-8-gap,0,-1])cylinder(d=2.8,h=15);
 }
+}
+
+module dotted_line(l){
+    for (i=[1:2:l]){
+        translate([0,0,i-1])cylinder(d=.5,h=1);
+    }
 }
