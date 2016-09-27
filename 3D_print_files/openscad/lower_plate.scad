@@ -3,7 +3,7 @@ gap=0.2;
     
 difference(){
 union(){
-cylinder(d=90,h=1.5);
+cylinder(d=90,h=2);
 translate([0,38,0])cylinder(d=14,h=8.5);
 translate([0,38,8.5])cylinder(r1=7, r2=6, h=1);
 translate([-31,-12,0])cube(size=[12,24,4]);
