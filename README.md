@@ -5,4 +5,4 @@ La información general del proyecto puede encontrarse en la wiki de Bricolabs
 
 http://bricolabs.cc/wiki/index.php?title=Sapoconcho
 
-![Sapoconcho](/sapoconcho/Sapoconcho_assy_800.jpg "Montaje")
+![Sapoconcho](/fstdp/sapoconcho/blob/master/Sapoconcho_assy_800.jpg "Montaje")
