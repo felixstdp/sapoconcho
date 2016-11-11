@@ -1,7 +1,7 @@
 // programa básico para Sapoconcho para evitar obstáculos usando los sensores US
 
 #include <L9110.h>
-L9110 sapoconcho;
+L9110 sapoconcho(3,5,6,9);
 
 #include <NewPing.h>
 NewPing sonar_L(8,8,50);  // trigger y echo al pin 8, distancia máxima limitada a 50cm
