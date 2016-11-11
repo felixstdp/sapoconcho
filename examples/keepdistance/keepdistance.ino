@@ -1,5 +1,5 @@
 #include <L9110.h>
-L9110 sapoconcho;
+L9110 sapoconcho(3,5,6,9);
 
 #include <NewPing.h>
 
