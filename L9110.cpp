@@ -40,35 +40,35 @@
       L9110 BIB |10~  AREF| 
       L9110 AIA |11~   3V3| 
       L9110 AIB |12~   ~13| 
+
 */
 
-#define AIA 11 // cambiar según esquema superior si se usa Arduino Pro Micro
-#define AIB 12
-#define BIA 9
-#define BIB 10
-
-L9110::L9110(){
-  pinMode(AIA,OUTPUT);
-  pinMode(AIB,OUTPUT);
-  pinMode(BIA,OUTPUT);
-  pinMode(BIB,OUTPUT);
+L9110::L9110(int aia, int aib, int bia, int bib){
+  this->_aia=aia;
+  this->_aib=aib;
+  this->_bia=bia;
+  this->_bib=bib;
+  pinMode(_aia,OUTPUT);
+  pinMode(_aib,OUTPUT);
+  pinMode(_bia,OUTPUT);
+  pinMode(_bib,OUTPUT);
 }
 
 void L9110::forward(int l, int r, int t)
 {
-  analogWrite(AIA,l);
-  analogWrite(AIB,0);
-  analogWrite(BIA,r);
-  analogWrite(BIB,0);
+  analogWrite(_aia,l);
+  analogWrite(_aib,0);
+  analogWrite(_bia,r);
+  analogWrite(_bib,0);
   delay(t);
 }
 
 void L9110::reverse(int l, int r, int t)
 {
-  analogWrite(AIA,0);
-  analogWrite(AIB,l);
-  analogWrite(BIA,0);
-  analogWrite(BIB,r);
+  analogWrite(_aia,0);
+  analogWrite(_aib,l);
+  analogWrite(_bia,0);
+  analogWrite(_bib,r);
   delay(t);
 }
 
@@ -76,27 +76,27 @@ void L9110::rotate(int l, int r, int t)
 {
   if (t>0)
   {
-    analogWrite(AIA,0);
-    analogWrite(AIB,l);
-    analogWrite(BIA,r);
-    analogWrite(BIB,0);
+    analogWrite(_aia,0);
+    analogWrite(_aib,l);
+    analogWrite(_bia,r);
+    analogWrite(_bib,0);
   }
   else
   {
-    analogWrite(AIA,l);
-    analogWrite(AIB,0);
-    analogWrite(BIA,0);
-    analogWrite(BIB,r);
+    analogWrite(_aia,l);
+    analogWrite(_aib,0);
+    analogWrite(_bia,0);
+    analogWrite(_bib,r);
   }
   delay(abs(t));
 }
 
 void L9110::brake(int t)
 {
-  analogWrite(AIA,0);
-  analogWrite(AIB,0);
-  analogWrite(BIA,0);
-  analogWrite(BIB,0);
+  analogWrite(_aia,0);
+  analogWrite(_aib,0);
+  analogWrite(_bia,0);
+  analogWrite(_bib,0);
   delay(t);
 }
 
@@ -104,20 +104,20 @@ void L9110::drive(int l, int r, int t)
 {
   if (l>0)
   {
-    analogWrite(AIA,l);
-    analogWrite(AIB,0);
+    analogWrite(_aia,l);
+    analogWrite(_aib,0);
   } else {
-    analogWrite(AIA,0);
-    analogWrite(AIB,-l);
+    analogWrite(_aia,0);
+    analogWrite(_aib,-l);
   }
   
   if (r>0)
   {
-    analogWrite(BIA,r);
-    analogWrite(BIB,0);    
+    analogWrite(_bia,r);
+    analogWrite(_bib,0);    
   } else {
-    analogWrite(BIA,0);
-    analogWrite(BIB,-r);
+    analogWrite(_bia,0);
+    analogWrite(_bib,-r);
   }
   
   delay(t);
