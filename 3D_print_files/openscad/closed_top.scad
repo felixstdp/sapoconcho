@@ -3,10 +3,10 @@ $fn=120;
 difference(){
 cylinder(d=90,h=25);
 translate([0,0,-1])cylinder(d=88,h=27);
-translate([0,0,15])rotate([0,90,0])    
-cylinder(d=30,h=100,center=true);
-translate([0,0,30])    
-cube([100,30,30],center=true);
+translate([0,0,20])rotate([0,90,0])    
+cylinder(d=35,h=100,center=true);
+translate([0,0,37.5])    
+cube([100,35,35],center=true);
 translate([0,0,-1])rotate([0,0,45])
 cube([50,50,50]);
 
@@ -36,7 +36,7 @@ for (i=[1:n]){
 $fn=120;
 gap=0.2;
 rotate([0,0,180])
-translate([0,0,-2])
+translate([0,0,-2.5])
 difference(){
 
 union(){
