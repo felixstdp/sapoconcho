@@ -15,9 +15,9 @@ for(i=[-45:30:45])
 rotate([0,0,i])    
 {
 translate([0,-42,22.25])rotate([90,0,0])
-cylinder(d=2.5,h=5); 
+cylinder(d=2,h=5); 
 translate([0,-42,2.75])rotate([90,0,0])
-cylinder(d=2.5,h=5);
+cylinder(d=2,h=5);
 translate([0,-45,12.5])   
 cube([6,2,15],center=true);   
 translate([-4.5*sign(i),-42,6.35])rotate([90,0,0])
