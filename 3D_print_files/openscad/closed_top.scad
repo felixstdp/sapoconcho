@@ -36,7 +36,7 @@ for (i=[1:n]){
 $fn=120;
 gap=0.2;
 rotate([0,0,180])
-translate([0,0,-2.5])
+translate([0,0,-2])
 difference(){
 
 union(){
