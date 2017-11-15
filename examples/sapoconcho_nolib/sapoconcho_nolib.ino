@@ -1,17 +1,16 @@
 // programa básico para Sapoconcho con los movimientos como subrutinas y no como librerías
 
-#define AIA 11 // HIGH >> left backward
-#define AIB 6 // HIGH >> left forward
-#define BIA 9 // HIGH >> right forward
-#define BIB 10 // HIGH >> right backwards
+#define AIA 3 // HIGH >> left backward
+#define AIB 5 // HIGH >> left forward
+#define BIA 6 // HIGH >> right forward
+#define BIB 9 // HIGH >> right backwards
 
 void setup() {
 
-  pinMode(9,OUTPUT);
-  pinMode(10,OUTPUT);
-  pinMode(11,OUTPUT);
-  pinMode(12,OUTPUT);
-  pinMode(13,OUTPUT);
+  pinMode(AIA,OUTPUT);
+  pinMode(AIB,OUTPUT);
+  pinMode(BIA,OUTPUT);
+  pinMode(BIB,OUTPUT);
   
 }
 
@@ -26,8 +25,6 @@ void loop() {
       
   }
   
-  tone(13,1500,50);
-
 }
 
 void forward(int l, int r, int t)
