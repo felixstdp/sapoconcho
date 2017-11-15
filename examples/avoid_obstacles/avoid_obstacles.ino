@@ -34,7 +34,3 @@ void loop()
   else sapoconcho.forward(240,240,0);
   
 }
-
-    Status API Training Shop Blog About Pricing 
-
-    © 2016 GitHub, Inc. Terms Privacy Security Contact He
