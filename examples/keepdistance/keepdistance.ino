@@ -3,11 +3,7 @@ L9110 sapoconcho(3,5,6,9);
 
 #include <NewPing.h>
 
-#define TRIGGER_PIN  7  // Arduino pin tied to trigger pin on the ultrasonic sensor.
-#define ECHO_PIN     7  // Arduino pin tied to echo pin on the ultrasonic sensor.
-#define MAX_DISTANCE 50 // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
-
-NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
+NewPing sonar(7,7,50); // NewPing setup of pins and maximum distance.
 
 void setup() {}
 
