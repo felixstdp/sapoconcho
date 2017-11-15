@@ -1,14 +1,14 @@
-#define AIA 9 // HIGH >> left backward
-#define AIB 10 // HIGH >> left forward
-#define BIA 12 // HIGH >> right forward
-#define BIB 11 // HIGH >> right backwards
+#define AIA 3 // HIGH >> left backward
+#define AIB 5 // HIGH >> left forward
+#define BIA 6 // HIGH >> right forward
+#define BIB 9 // HIGH >> right backwards
 
 void setup() {
 
-  pinMode(9,OUTPUT);
-  pinMode(10,OUTPUT);
-  pinMode(11,OUTPUT);
-  pinMode(12,OUTPUT);
+  pinMode(AIA,OUTPUT);
+  pinMode(AIB,OUTPUT);
+  pinMode(BIA,OUTPUT);
+  pinMode(BIB,OUTPUT);
   
 }
 
