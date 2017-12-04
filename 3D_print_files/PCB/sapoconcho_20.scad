@@ -18,8 +18,8 @@ translate([32,-22,-1])cylinder(d=3.2,h=15);
 translate([-32,22,-1])cylinder(d=3.2,h=15);
 translate([-32,-22,-1])cylinder(d=3.2,h=15);
 
-translate([-13.97,7.62+20,-1])pin20mil(12,1.94,10);
-translate([-13.97,-7.62+20,-1])pin20mil(12,1.94,10);
+translate([-13.97,7.62+8*2.54,-1])pin20mil(12,1.94,10);
+translate([-13.97,-7.62+8*2.54,-1])pin20mil(12,1.94,10);
 
 translate([-8.89,7.62,-1])pin20mil(8,1.94,10);
 translate([-8.89,-7.62,-1])pin20mil(8,1.94,10);
@@ -38,8 +38,8 @@ for (i=[1:n]){
 
 module cny70()
 {
-    translate([-1.4,-1.4,-1])cylinder(d=1,h=4);
-    translate([1.4,-1.4,-1])cylinder(d=1,h=4);
-    translate([1.4,1.4,-1])cylinder(d=1,h=4);
-    translate([-1.4,1.4,-1])cylinder(d=1,h=4);
+    translate([-1.4,-1.4,-1])cylinder(d=1.5,h=4);
+    translate([1.4,-1.4,-1])cylinder(d=1.5,h=4);
+    translate([1.4,1.4,-1])cylinder(d=1.5,h=4);
+    translate([-1.4,1.4,-1])cylinder(d=1.5,h=4);
 }
