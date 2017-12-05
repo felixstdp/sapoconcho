@@ -1,22 +1,21 @@
 $fn=72;
-gap=0.2;
     
 difference(){
 
-cylinder(d=90,h=2);
+cylinder(d=95,h=2);
 
-translate([35,-18,-1])cube(size=[36,36,14]);
-translate([-71,-18,-1])cube(size=[36,36,14]);
+translate([37.5,-18,-1])cube(size=[36,36,14]);
+translate([-73.5,-18,-1])cube(size=[36,36,14]);
 
-translate([25,8+gap,-1])cylinder(d=2.8,h=15);
-translate([25,-8-gap,-1])cylinder(d=2.8,h=15);
-translate([-25,8+gap,-1])cylinder(d=2.8,h=15);
-translate([-25,-8-gap,-1])cylinder(d=2.8,h=15);
+translate([27.5,8,-1])cylinder(d=2.8,h=15);
+translate([27.5,-8,-1])cylinder(d=2.8,h=15);
+translate([-27.5,8,-1])cylinder(d=2.8,h=15);
+translate([-27.5,-8,-1])cylinder(d=2.8,h=15);
 
-translate([32,22,-1])cylinder(d=3.2,h=15);
-translate([32,-22,-1])cylinder(d=3.2,h=15);
-translate([-32,22,-1])cylinder(d=3.2,h=15);
-translate([-32,-22,-1])cylinder(d=3.2,h=15);
+translate([35,22,-1])cylinder(d=3.2,h=15);
+translate([35,-22,-1])cylinder(d=3.2,h=15);
+translate([-35,22,-1])cylinder(d=3.2,h=15);
+translate([-35,-22,-1])cylinder(d=3.2,h=15);
 
 translate([-13.97,7.62+8*2.54,-1])pin20mil(12,1.94,10);
 translate([-13.97,-7.62+8*2.54,-1])pin20mil(12,1.94,10);
@@ -24,10 +23,10 @@ translate([-13.97,-7.62+8*2.54,-1])pin20mil(12,1.94,10);
 translate([-8.89,7.62,-1])pin20mil(8,1.94,10);
 translate([-8.89,-7.62,-1])pin20mil(8,1.94,10);
 
-rotate([0,0,12])translate([0,41,0])cny70();
-rotate([0,0,-12])translate([0,41,0])cny70();
-rotate([0,0,36])translate([0,41,0])cny70();
-rotate([0,0,-36])translate([0,41,0])cny70();
+rotate([0,0,12])translate([0,43,0])cny70();
+rotate([0,0,-12])translate([0,43,0])cny70();
+rotate([0,0,36])translate([0,43,0])cny70();
+rotate([0,0,-36])translate([0,43,0])cny70();
 
 }
 
