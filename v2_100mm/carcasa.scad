@@ -3,7 +3,7 @@ $fn=72;
 difference(){
 cylinder(d=100,h=30);
 
-translate([0,0,-2])cylinder(d=94,h=30);
+translate([0,0,-1.5])cylinder(d=97,h=30);
 translate([0,50,13])cube([50,50,30],center=true);    
 
 cube(size=[120,36,5],center=true);
