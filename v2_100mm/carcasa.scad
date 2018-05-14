@@ -30,4 +30,8 @@ translate([13,0,0])
 translate([-13,0,0])
     cylinder(d=16.5,h=60);
 }
+
+translate([-32,-3,30])
+text("sapoconcho",font="Calibri",size=10);
+
 }
