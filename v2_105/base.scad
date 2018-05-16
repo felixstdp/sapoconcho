@@ -43,14 +43,14 @@ translate([0,45,10])cube(size=[3,15,16],center=true);
 
 translate([0,-25,0]){
 
-translate([-6.35,22.77,-1])pin20mil(6,1.94,10);
-translate([-6.35,38.1,-1])pin20mil(6,1.94,10);
+translate([-8.89,22.77,-1])pin20mil(8,1.94,10);
+translate([-8.89,38.1,-1])pin20mil(8,1.94,10);
 translate([-13.97,15.24,-1])pin20mil(12,1.94,10);
 translate([-13.97,0,-1])pin20mil(12,1.94,10);
 }
 
-rotate([0,0,30])translate([-3.81,-35,-1])pin20mil(4,1.94,10);
-rotate([0,0,-30])translate([-3.81,-35,-1])pin20mil(4,1.94,10);
+rotate([0,0,35])translate([-3.81,-35,-1])pin20mil(4,1.94,10);
+rotate([0,0,-35])translate([-3.81,-35,-1])pin20mil(4,1.94,10);
 
 }
 
