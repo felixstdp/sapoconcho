@@ -4,7 +4,6 @@ difference(){
 cylinder(d=105,h=31.5);
 
 translate([0,0,-1])cylinder(d=102,h=31);
-translate([0,50,15])cube([50,50,30],center=true);    
 
 cube(size=[120,36,5],center=true);
 translate([0,0,5])rotate([0,90,0])
@@ -30,7 +29,8 @@ translate([-13,0,0])
     cylinder(d=16.5,h=60);
 }
 
-translate([-32,-3,31.5])
+translate([-32,-3,31])
+linear_extrude(height=1){
 text("sapoconcho",font="Calibri",size=10);
-
+}
 }
