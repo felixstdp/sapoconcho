@@ -7,6 +7,8 @@ translate([-29,-11.5,0])cylinder(d=2.5,h=3);
 translate([29,-11.5,0])cylinder(d=2.5,h=3);
 translate([0,42.5,0])cube(35,center=true);
 translate([0,-42.5,0])cube(35,center=true);
+translate([-17,12,0])cube([4,3,4]);
+translate([-17,-15,0])cube([4,3,4]);
 }
 
 translate([-10,15,2.5])rotate([0,0,90])
