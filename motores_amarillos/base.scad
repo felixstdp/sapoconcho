@@ -1,16 +1,21 @@
 $fn=60;
 
-#translate([10,-11.2,3])motorandwheel();
-#scale([-1,1,1])translate([10,-11.2,3])motorandwheel();
+#translate([15,-11.2,3])motorandwheel();
+#scale([-1,1,1])translate([15,-11.2,3])motorandwheel();
    
 difference(){
-cylinder(d=120,h=3);
-translate([28,-34,0])cube(68);    
+cylinder(d=140,h=3);
+translate([33,-34,0])cube(68);
+scale([-1,1,1])translate([33,-34,0])cube(68);
+translate([45,45,-1])cylinder(d=3.2,h=5);    
+translate([-45,45,-1])cylinder(d=3.2,h=5);    
+translate([45,-45,-1])cylinder(d=3.2,h=5);    
+translate([-45,-45,-1])cylinder(d=3.2,h=5);    
 }
 
 difference(){
-translate([-10,11,3])cube([20,15,22.35]);
-translate([-7,16,-10])cube([14,11,50]);
+translate([-15,11,3])cube([30,15,22.35]);
+translate([-12,16,-10])cube([24,11,50]);
 translate([0,20.6,5.465])rotate([0,90,0])
 cylinder(d=2.8,h=50,center=true,$fn=30);
 translate([0,20.6,22.885])rotate([0,90,0])
