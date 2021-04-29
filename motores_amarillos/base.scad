@@ -1,11 +1,11 @@
 $fn=60;
 
-#translate([15,-11.2,3])motorandwheel();
-#scale([-1,1,1])translate([15,-11.2,3])motorandwheel();
+#translate([12.5,-11.2,3])motorandwheel();
+#scale([-1,1,1])translate([12.5,-11.2,3])motorandwheel();
    
 difference(){
-cylinder(d=140,h=3);
-translate([33,-34,-1])cube(68);
+cylinder(d=130,h=3);
+translate([33,-35,-1])cube(70);
 scale([-1,1,1])translate([33,-34,-1])cube(68);
 translate([45,45,-1])cylinder(d=3.2,h=5);    
 translate([-45,45,-1])cylinder(d=3.2,h=5);    
@@ -14,11 +14,11 @@ translate([-45,-45,-1])cylinder(d=3.2,h=5);
 }
 
 difference(){
-translate([-15,6,3])cube([30,20,22.35]);
-translate([-12,16,-10])cube([24,11,50]);
-translate([0,20.6,5.465])rotate([0,90,0])
+translate([-12.5,6,3])cube([25,20,22.35]);
+translate([-9.5,15,-10])cube([19,12,50]);
+translate([0,19.1,5.465])rotate([0,90,0])
 cylinder(d=2.8,h=50,center=true,$fn=30);
-translate([0,20.6,22.885])rotate([0,90,0])
+translate([0,19.1,22.885])rotate([0,90,0])
 cylinder(d=2.8,h=50,center=true,$fn=30);
 }
 
