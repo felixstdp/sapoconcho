@@ -7,7 +7,7 @@ translate([0,0,12.5])cylinder(h=2.5,d2=45,d1=50);
 }
 translate([0,0,7.5])
 rotate_extrude(angle = 360, convexity = 2) {
-translate([25.5,0,0])circle(1.25);
+translate([25.5,0,0])circle(1.6);
 }
 translate([0,0,3])cylinder(d=42,h=15);
 
