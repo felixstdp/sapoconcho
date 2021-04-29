@@ -5,12 +5,12 @@ $fn=60;
    
 difference(){
 cylinder(d=130,h=3);
-translate([33,-35,-1])cube(70);
-scale([-1,1,1])translate([33,-34,-1])cube(68);
-translate([45,45,-1])cylinder(d=3.2,h=5);    
-translate([-45,45,-1])cylinder(d=3.2,h=5);    
-translate([45,-45,-1])cylinder(d=3.2,h=5);    
-translate([-45,-45,-1])cylinder(d=3.2,h=5);    
+translate([31,-35,-1])cube(70);
+scale([-1,1,1])translate([31,-34,-1])cube(68);
+translate([42,42,-1])cylinder(d=3.2,h=5);    
+translate([-42,42,-1])cylinder(d=3.2,h=5);    
+translate([42,-42,-1])cylinder(d=3.2,h=5);    
+translate([-42,-42,-1])cylinder(d=3.2,h=5);    
 }
 
 difference(){
