@@ -8,7 +8,8 @@ scale([-1,1,1])translate([36,-27.5,-1])cube(55);
 translate([42,36,-1])cylinder(d=3.2,h=5);    
 translate([-42,36,-1])cylinder(d=3.2,h=5);    
 translate([42,-36,-1])cylinder(d=3.2,h=5);    
-translate([-42,-36,-1])cylinder(d=3.2,h=5);    
+translate([-42,-36,-1])cylinder(d=3.2,h=5); 
+cylinder(d=12,h=5);
 }
 
 difference(){
