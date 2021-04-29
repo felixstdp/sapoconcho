@@ -17,8 +17,9 @@ translate([13,0,-1])cylinder(d=12,h=15,$fn=5);
 }
 }
 difference(){
-cylinder(d=10,h=15);
-translate([0,0,7.05])
+cylinder(d=11,h=17);
+translate([0,0,9.05])
+scale(1.02)    // ajustar según impresora
     intersection(){
 cylinder(d=5,5,h=8);
 translate([0,0,4])cube([4,6,8],center=true);
