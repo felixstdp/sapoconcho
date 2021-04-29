@@ -1,28 +1,10 @@
 $fn=120;
 
-#translate([18,-11.2,3])motorandwheel();
-#scale([-1,1,1])translate([18,-11.2,3])motorandwheel();
+base125();
+tapa125();
+#translate([20.5,-11.2,3])motorandwheel();
+#scale([-1,1,1])translate([20.5,-11.2,3])motorandwheel();
    
-difference(){
-cylinder(d=125,h=3);
-translate([36,-27.5,-1])cube(55);
-scale([-1,1,1])translate([36,-27.5,-1])cube(55);
-translate([42,36,-1])cylinder(d=3.2,h=5);    
-translate([-42,36,-1])cylinder(d=3.2,h=5);    
-translate([42,-36,-1])cylinder(d=3.2,h=5);    
-translate([-42,-36,-1])cylinder(d=3.2,h=5);    
-}
-
-translate([0,0,28])
-difference(){
-cylinder(d=125,h=3);
-translate([36,-27.5,-1])cube(55);
-scale([-1,1,1])translate([36,-27.5,-1])cube(55);
-translate([42,36,-1])cylinder(d=3.2,h=5);    
-translate([-42,36,-1])cylinder(d=3.2,h=5);    
-translate([42,-36,-1])cylinder(d=3.2,h=5);    
-translate([-42,-36,-1])cylinder(d=3.2,h=5);    
-}
 color("gray"){
 translate([42,36,3])cylinder(d=6,h=25,$fn=6);    
 translate([-42,36,3])cylinder(d=6,h=25,$fn=6);    
@@ -30,13 +12,38 @@ translate([42,-36,3])cylinder(d=6,h=25,$fn=6);
 translate([-42,-36,3])cylinder(d=6,h=25,$fn=6);  
 }
 
+module base125(){
+    difference(){
+cylinder(d=120,h=3);
+translate([38.5,-27.5,-1])cube(55);
+scale([-1,1,1])translate([38.5,-27.5,-1])cube(55);
+translate([42,36,-1])cylinder(d=3.2,h=5);    
+translate([-42,36,-1])cylinder(d=3.2,h=5);    
+translate([42,-36,-1])cylinder(d=3.2,h=5);    
+translate([-42,-36,-1])cylinder(d=3.2,h=5);    
+}
+
 difference(){
-translate([-18,6,3])cube([36,20,22.35]);
-translate([-9.5,15,-10])cube([19,12,50]);
+translate([-20.5,6,3])cube([41,20,22.35]);
+translate([-12.5,15,-10])cube([25,12,50]);
 translate([0,19.1,5.465])rotate([0,90,0])
 cylinder(d=2.8,h=50,center=true,$fn=30);
 translate([0,19.1,22.885])rotate([0,90,0])
 cylinder(d=2.8,h=50,center=true,$fn=30);
+}
+}
+
+module tapa125(){
+    translate([0,0,28])
+difference(){
+cylinder(d=120,h=3);
+translate([38.5,-27.5,-1])cube(55);
+scale([-1,1,1])translate([38.5,-27.5,-1])cube(55);
+translate([42,36,-1])cylinder(d=3.2,h=5);    
+translate([-42,36,-1])cylinder(d=3.2,h=5);    
+translate([42,-36,-1])cylinder(d=3.2,h=5);    
+translate([-42,-36,-1])cylinder(d=3.2,h=5);    
+}
 }
 
 module motorandwheel(){
@@ -68,7 +75,7 @@ translate([0,0,12.5])cylinder(h=2.5,d2=45,d1=50);
 }
 translate([0,0,7.5])
 rotate_extrude(angle = 360, convexity = 2) {
-translate([25,0,0])circle(1.25);
+translate([25.5,0,0])circle(1.25);
 }
 translate([0,0,3])cylinder(d=42,h=15);
 
@@ -82,7 +89,7 @@ translate([0,0,0.001])cylinder(d=11,h=17);
 translate([0,0,9.05])
 scale(1.02)    // ajustar según impresora
     intersection(){
-cylinder(d=5,5,h=8);
+cylinder(d=5.5,h=8);
 translate([0,0,4])cube([4,6,8],center=true);
     }
 }
