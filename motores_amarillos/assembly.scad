@@ -1,32 +1,30 @@
 $fn=120;
 
 translate([0,0,3])scale([1,1,-1])lower_plate();
-translate([0,0,35])upper_plate();
+#translate([0,0,35])upper_plate();
 translate([0,0,3])motor_support();
 #translate([20.5,-11.2,3])motorandwheel();
 #scale([-1,1,1])translate([20.5,-11.2,3])motorandwheel();
    
-color("gray"){
-translate([42,36,3])cylinder(d=6,h=32,$fn=6);    
-translate([-42,36,3])cylinder(d=6,h=32,$fn=6);    
-translate([42,-36,3])cylinder(d=6,h=32,$fn=6);    
-translate([-42,-36,3])cylinder(d=6,h=32,$fn=6);  
-}
+translate([44,34,3])pillar();    
+translate([-44,34,3])pillar();    
+translate([44,-34,3])pillar();    
+translate([-44,-34,3])pillar();  
 
 module lower_plate(){
 $fn=120;
-translate([0,50,0])ballcaster();
+translate([0,-50,0])ballcaster();
  
 difference(){
 cylinder(d=120,h=3);
 translate([39,-27.5,-1])cube(55);
 scale([-1,1,1])translate([39,-27.5,-1])cube(55);
-translate([42,36,-1])cylinder(d=3.2,h=5);    
-translate([-42,36,-1])cylinder(d=3.2,h=5);    
-translate([42,-36,-1])cylinder(d=3.2,h=5);    
-translate([-42,-36,-1])cylinder(d=3.2,h=5); 
+translate([44,34,-1])cylinder(d=3.2,h=5);    
+translate([-44,34,-1])cylinder(d=3.2,h=5);    
+translate([44,-34,-1])cylinder(d=3.2,h=5);    
+translate([-44,-34,-1])cylinder(d=3.2,h=5); 
 translate([0,-5,0])cylinder(d=16,h=5);
-translate([0,50,0])cylinder(d=14,h=8.5);
+translate([0,-50,0])cylinder(d=14,h=8.5);
 translate([15,12,0])cylinder(d=3.2,h=30);    
 translate([-15,12,0])cylinder(d=3.2,h=30);      
 }
@@ -49,10 +47,10 @@ difference(){
 cylinder(d=120,h=3);
 translate([39,-27.5,-1])cube(55);
 scale([-1,1,1])translate([39,-27.5,-1])cube(55);
-translate([42,36,-1])cylinder(d=3.2,h=5);    
-translate([-42,36,-1])cylinder(d=3.2,h=5);    
-translate([42,-36,-1])cylinder(d=3.2,h=5);    
-translate([-42,-36,-1])cylinder(d=3.2,h=5);    
+translate([44,34,-1])cylinder(d=3.2,h=5);    
+translate([-44,34,-1])cylinder(d=3.2,h=5);    
+translate([44,-34,-1])cylinder(d=3.2,h=5);    
+translate([-44,-34,-1])cylinder(d=3.2,h=5);    
 }
 }
 
@@ -117,5 +115,14 @@ scale(1.05)    // ajustar según impresora
 cylinder(d=5.35,h=9);
 translate([0,0,4])cube([3.7,6,9],center=true);
     }
+}
+}
+
+module pillar(){
+    $fn=30;
+difference(){
+cylinder(d=7,h=32);
+cylinder(d=2.8,h=10);
+translate([0,0,22])cylinder(d=2.8,h=10);
 }
 }
