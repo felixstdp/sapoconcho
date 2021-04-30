@@ -5,10 +5,10 @@ difference(){
 cylinder(d=120,h=3);
 translate([39,-27.5,-1])cube(55);
 scale([-1,1,1])translate([39,-27.5,-1])cube(55);
-translate([42,36,-1])cylinder(d=3.2,h=5);    
-translate([-42,36,-1])cylinder(d=3.2,h=5);    
-translate([42,-36,-1])cylinder(d=3.2,h=5);    
-translate([-42,-36,-1])cylinder(d=3.2,h=5); 
+translate([44,34,-1])cylinder(d=3.2,h=5);    
+translate([-44,34,-1])cylinder(d=3.2,h=5);    
+translate([44,-34,-1])cylinder(d=3.2,h=5);    
+translate([-44,-34,-1])cylinder(d=3.2,h=5); 
 translate([0,-5,0])cylinder(d=16,h=5);
 translate([0,-50,0])cylinder(d=14,h=8.5);
 translate([15,12,0])cylinder(d=3.2,h=30);    
