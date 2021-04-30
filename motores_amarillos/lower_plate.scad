@@ -1,5 +1,5 @@
 $fn=120;
-translate([0,50,0])ballcaster();
+translate([0,-50,0])ballcaster();
  
 difference(){
 cylinder(d=120,h=3);
@@ -10,7 +10,7 @@ translate([-42,36,-1])cylinder(d=3.2,h=5);
 translate([42,-36,-1])cylinder(d=3.2,h=5);    
 translate([-42,-36,-1])cylinder(d=3.2,h=5); 
 translate([0,-5,0])cylinder(d=16,h=5);
-translate([0,50,0])cylinder(d=14,h=8.5);
+translate([0,-50,0])cylinder(d=14,h=8.5);
 translate([15,12,0])cylinder(d=3.2,h=30);    
 translate([-15,12,0])cylinder(d=3.2,8,h=30);      
 }
