@@ -1,3 +1,4 @@
+$fn=120;
 difference(){
 cylinder(d=120,h=3);
 translate([39,-27.5,-1])cube(55);
