@@ -3,7 +3,7 @@
 
 class sapoconchoL {
   public:
-    L9110(int ain1, int bin1, int pwma, int pwmb);
+    sapoconchoL(int ain1, int bin1, int pwma, int pwmb);
     void forward(int l, int r, int t);
     void reverse(int l, int r, int t);
     void rotate(int l, int r, int t);
