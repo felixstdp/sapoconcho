@@ -10,6 +10,8 @@ mclon::mclon(){
 
 void mclon::forward(int l, int r, int t)
 {
+  l=constrain(l,0,255); // avoid PWM overflow
+  r=constrain(r,0,255);
   digitalWrite(7,HIGH);
   analogWrite(6,l);
   digitalWrite(4,HIGH);
@@ -19,6 +21,8 @@ void mclon::forward(int l, int r, int t)
 
 void mclon::reverse(int l, int r, int t)
 {
+  l=constrain(l,0,255); // avoid PWM overflow
+  r=constrain(r,0,255);
   analogWrite(7,LOW);
   analogWrite(6,l);
   analogWrite(4,LOW);
@@ -28,6 +32,8 @@ void mclon::reverse(int l, int r, int t)
 
 void mclon::rotate(int l, int r, int t)
 {
+  l=constrain(l,0,255); // avoid PWM overflow
+  r=constrain(r,0,255);
   if (t>0)
   {
     digitalWrite(7,HIGH);
@@ -56,6 +62,8 @@ void mclon::brake(int t)
 
 void mclon::drive(int l, int r, int t)
 {
+  l=constrain(l,-255,255); // avoid PWM overflow
+  r=constrain(r,-255,255);
   if (l>0)
   {
     analogWrite(7,HIGH);
