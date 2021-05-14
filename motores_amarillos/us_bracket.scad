@@ -1,6 +1,9 @@
 difference()
 {
-cube([48.1,21.1,5],center=true);
+minkowski($fn=30){
+cube([46.1,19.1,5],center=true);
+cylinder(d=2,h=0.0001);
+}
 translate([0,0,1.5])cube([45.7,22,5],center=true);
     
 translate([13,0,-5])cylinder(d=16.5,h=5,$fn=60);
@@ -16,3 +19,14 @@ translate([23.2,9,1.7])sphere(0.8,$fn=30);
 translate([23.2,-9,1.7])sphere(0.8,$fn=30);
 translate([-23.2,9,1.7])sphere(0.8,$fn=30);
 translate([-23.2,-9,1.7])sphere(0.8,$fn=30);
+
+translate([9,12.5,-2.5])rotate([0,0,180])acuerdo();
+translate([-9,12.5,-2.5])rotate([0,0,-90])acuerdo();
+
+
+module acuerdo(){
+difference(){
+cube([2,2,1.5]);
+cylinder(d=4,h=2,$fn=30);
+}
+}
