@@ -169,7 +169,7 @@ translate([-9.5,14,-2.5])rotate([0,0,-90])acuerdo();
 
 translate([-7.5,12,-3])cube([15,7,2.5]);
 difference(){
-translate([-7.5,17,-2.5])cube([15,2.5,11]);
+translate([-7.5,17,-3])cube([15,2.5,11]);
 translate([0,0,4])rotate([-90,0,0])
 cylinder(d=3.2,h=20,$fn=30);
 }
