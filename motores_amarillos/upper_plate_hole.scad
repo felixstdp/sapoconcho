@@ -1,3 +1,4 @@
+$fn=120;
 difference(){
 cylinder(d=120,h=3);
 translate([39,-27.5,-1])cube(55);
@@ -6,8 +7,8 @@ translate([44,34,-1])cylinder(d=3.2,h=5);
 translate([-44,34,-1])cylinder(d=3.2,h=5);    
 translate([44,-34,-1])cylinder(d=3.2,h=5);    
 translate([-44,-34,-1])cylinder(d=3.2,h=5); 
-translate([23,32,-1])cylinder(d=3.2,h=5);    
-translate([-23,32,-1])cylinder(d=3.2,h=5); 
 translate([0,30,-1])cylinder(d=15,h=5);    
-translate([0,42,-1])cylinder(d=3.2,h=5);      
+translate([0,42,-1])cylinder(d=3.2,h=5);
+rotate([0,0,35])translate([0,42,-1])cylinder(d=3.2,h=5);    
+rotate([0,0,-35])translate([0,42,-1])cylinder(d=3.2,h=5);    
 }
