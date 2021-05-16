@@ -25,8 +25,10 @@ hull(){
 translate([-23,9,1.9])sphere(0.8,$fn=20);
 translate([-23,-9,1.9])sphere(0.8,$fn=20);
 }
-translate([9.5,14,-2.5])rotate([0,0,180])acuerdo();
-translate([-9.5,14,-2.5])rotate([0,0,-90])acuerdo();
+translate([9.5,14,-3])rotate([0,0,180])
+scale([1,1,1.25])acuerdo();
+translate([-9.5,14,-3])rotate([0,0,-90])
+scale([1,1,1.25])acuerdo();
 
 translate([-7.5,12,-3])cube([15,7,2.5]);
 difference(){
