@@ -11,6 +11,6 @@ translate([0,-4,0])
 
 difference()
 {
-translate([0,-4,-4.5])cylinder(d=10,h=2,$fn=30);
-translate([0,-4,-4.5])cylinder(d=3.2,h=2,$fn=12);
+translate([0,-4.5,-4.5])cylinder(d=10,h=2,$fn=30);
+translate([0,-4.5,-4.5])cylinder(d=3.2,h=2,$fn=12);
 }
