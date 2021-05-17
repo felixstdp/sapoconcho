@@ -12,7 +12,9 @@ translate([-44,-34,-1])cylinder(d=3.2,h=5);
 translate([0,-5,0])cylinder(d=16,h=5);
 translate([15,11.5,0])cylinder(d=3.2,h=30);    
 translate([-15,11.5,0])cylinder(d=3.2,h=30);      
-}
+rotate([0,0,15])translate([0,39.5,0])cylinder(d=2.8,h=30); 
+rotate([0,0,-15])translate([0,39.5,0])cylinder(d=2.8,h=30); 
+ }
 
 module ballcaster(){
 difference(){
