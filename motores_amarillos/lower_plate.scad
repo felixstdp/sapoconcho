@@ -10,7 +10,6 @@ translate([-44,34,-1])cylinder(d=3.2,h=5);
 translate([44,-34,-1])cylinder(d=3.2,h=5);    
 translate([-44,-34,-1])cylinder(d=3.2,h=5); 
 translate([0,-5,0])cylinder(d=16,h=5);
-//translate([0,-50,0])cylinder(d=14,h=8.5);
 translate([15,11.5,0])cylinder(d=3.2,h=30);    
 translate([-15,11.5,0])cylinder(d=3.2,h=30);      
 }
