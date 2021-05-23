@@ -12,20 +12,20 @@ translate([-44,-34,-1])cylinder(d=3.2,h=5);
 translate([0,-5,0])cylinder(d=16,h=5);
 translate([15,11.5,0])cylinder(d=3.2,h=30);    
 translate([-15,11.5,0])cylinder(d=3.2,h=30);      
-translate([-63.5/2,28,0])cylinder(d=3.2,h=30);      
-translate([63.5/2,28,0])cylinder(d=3.2,h=30);
+translate([-63.5/2,28,0])cylinder(d=2.8,h=30);      
+translate([63.5/2,28,0])cylinder(d=2.8,h=30);
 translate([-9,37,0])cylinder(d=2.8,h=4);    
 translate([9,37,0])cylinder(d=2.8,h=4);    
 }
 
 difference(){
-translate([-63.5/2,28,0])cylinder(d=8,h=5.5);      
-translate([-63.5/2,28,0])cylinder(d=3.2,h=30);      
+translate([-63.5/2,28,0])cylinder(d=8,h=4.8);      
+translate([-63.5/2,28,0])cylinder(d=2.8,h=30);      
 }
 
 difference(){
-translate([63.5/2,28,0])cylinder(d=8,h=5.5);      
-translate([63.5/2,28,0])cylinder(d=3.2,h=30);      
+translate([63.5/2,28,0])cylinder(d=8,h=4.8);      
+translate([63.5/2,28,0])cylinder(d=2.8,h=30);      
 }
 
 module ballcaster(){
