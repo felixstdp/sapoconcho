@@ -32,6 +32,8 @@ void drive(int L, int R, int t) // speed for wheels Left and Right, positive is 
   L=constrain(L,-255,255); // avoid PWM overflow
   R=constrain(R,-255,255);
   
+  digitalWrite(STBY, HIGH);
+  
   digitalWrite(AIN1, L<0); // switch < and >= if left wheel doesnt spin as expected
   digitalWrite(AIN2, L>=0);
   analogWrite(PWMA, abs(L));
